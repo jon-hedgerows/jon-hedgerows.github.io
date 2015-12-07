@@ -30,36 +30,32 @@
         <h3>
 <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"><span class="octicon octicon-link"></span></a>Welcome to Jon's raspbian repository</h3>
 
-<p>This site hosts software for the Raspberry Pi, including</p>
+<p>This site hosts software for the Raspberry Pi (specifically, for Raspian wjeezy and Raspbian jessie), including</p>
 
 <ul>
 <li>get-iplayer</li>
 <li>AtomicParsley</li>
 <li>rtmpdump</li>
-<li>nginx with nginx-rtmp-module</li>
 </ul><h3>
 <a name="using-this-repository" class="anchor" href="#using-this-repository"><span class="octicon octicon-link"></span></a>Using this repository</h3>
 
 <ol>
 <li>
-<p>Add the repository</p>
+<p>Add the repository:</p>
 
-<p>Paste these <em>five</em> lines into a terminal window:</p>
+<p>Paste these lines into a terminal window -</p>
 
-<pre><code>sudo bash -c "cat &gt; /etc/apt/sources.list.d/packages.hedgerows.org.uk.list &lt;&lt;EOF
-deb http://packages.hedgerows.org.uk/raspbian wheezy/
-deb-src http://packages.hedgerows.org.uk/raspbian wheezy/
-EOF
-"
+<pre><code>echo "deb http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
+echo "deb-src http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee -a /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
 </code></pre>
 </li>
 <li>
-<p>Update, and install the repository signing key, and update again:</p>
-
-<pre><code>sudo apt-get update
-sudo apt-get --allow-unauthenticated -y install jonhedgerows-keyring
-sudo apt-get update
-</code></pre>
+<p>Install the repository signing key:</p>
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
+</li>
+<li>
+<p>Update your package index:</p>
+<pre><code>sudo apt-get update</code></pre>
 </li>
 </ol>
 <h3>
