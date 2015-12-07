@@ -30,7 +30,7 @@
         <h3>
 <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"><span class="octicon octicon-link"></span></a>Welcome to Jon's raspbian repository</h3>
 
-<p>This site hosts software for the Raspberry Pi (specifically, for Raspian wjeezy and Raspbian jessie), including</p>
+<p>This site hosts software for the Raspberry Pi (specifically, for Raspian wheezy and Raspbian jessie), including</p>
 
 <ul>
 <li>get-iplayer</li>
@@ -58,6 +58,25 @@ echo "deb-src http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee -a /
 <pre><code>sudo apt-get update</code></pre>
 </li>
 </ol>
+<h3>
+<a name="removing-this-repository" class="anchor" href="#removing-this-repository"><span class="octicon octicon-link"></span></a>Removing this repository</h3>
+
+<ol>
+<li>
+<p>Remove the repository:</p>
+
+<pre><code>sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list</code></pre>
+</li>
+<li>
+<p>Remove the repository signing key:</p>
+<pre><code>sudo apt-key del 0F5BFDFE</code></pre>
+</li>
+<li>
+<p>Update your package index:</p>
+<pre><code>sudo apt-get update</code></pre>
+</li>
+</ol>
+
 <h3>
 <a name="browse-the-repository" class="anchor" href="#browse-the-repository"><span class="octicon octicon-link"></span></a>Browse the repository</h3>
 
