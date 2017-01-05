@@ -1,101 +1,88 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="packages.hedgerows.org.uk : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="packages.hedgerows.org.uk :" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css" />
     <title>packages.hedgerows.org.uk</title>
   </head>
-
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jon-hedgerows">View on GitHub</a>
-
-          <h1 id="project_title">packages.hedgerows.org.uk</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jon-hedgerows">View on GitHub</a>
+        <h1 id="project_title">packages.hedgerows.org.uk</h1>
+        <h2 id="project_tagline"></h2>
+      </header>
     </div>
-
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"><span class="octicon octicon-link"></span></a>Welcome to Jon's raspbian repository</h3>
-
-<p>This site hosts software for the Raspberry Pi (specifically, for Raspian wheezy and Raspbian jessie), including</p>
-
-<ul>
-<li>get-iplayer</li>
-<li>AtomicParsley</li>
-<li>rtmpdump</li>
-</ul><h3>
-<a name="using-this-repository" class="anchor" href="#using-this-repository"><span class="octicon octicon-link"></span></a>Using this repository</h3>
-
-<ol>
-<li>
-<p>Add the repository:</p>
-
-<p>Paste these lines into a terminal window -</p>
-
-<pre><code>echo "deb http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
-echo "deb-src http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee -a /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
+        <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
+        Jon&#39;s raspbian repository</h3>
+        <p>This site hosts software for the Raspberry Pi (specifically, for Raspian wheezy and Raspbian jessie), including</p>
+        <ul>
+          <li>get-iplayer</li>
+          <li>AtomicParsley</li>
+          <li>rtmpdump</li>
+        </ul>
+        <h3>Expired Repository Signing Key</h3>
+        <p>My GPG key expired in January 2017 - if you installed the repository signing key prior to this you will need to reinstall it:</p>
+        <pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
+		<br/>
+        <h3>
+        <a name="using-this-repository" class="anchor" href="#using-this-repository"></a>Using this repository</h3>
+        <ol>
+          <li>Add the repository:
+            <p>Paste these lines into a terminal window -</p>
+            <pre><code>echo &quot;deb http://packages.hedgerows.org.uk/raspbian wheezy/&quot; | sudo tee
+/etc/apt/sources.list.d/packages.hedgerows.org.uk.list
+echo &quot;deb-src http://packages.hedgerows.org.uk/raspbian wheezy/&quot; | sudo tee -a
+/etc/apt/sources.list.d/packages.hedgerows.org.uk.list
 </code></pre>
-</li>
-<li>
-<p>Install the repository signing key:</p>
-<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
-</li>
-<li>
-<p>Update your package index:</p>
-<pre><code>sudo apt-get update</code></pre>
-</li>
-</ol>
-<h3>
-<a name="removing-this-repository" class="anchor" href="#removing-this-repository"><span class="octicon octicon-link"></span></a>Removing this repository</h3>
-
-<ol>
-<li>
-<p>Remove the repository:</p>
-
-<pre><code>sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list</code></pre>
-</li>
-<li>
-<p>Remove the repository signing key:</p>
-<pre><code>sudo apt-key del 0F5BFDFE</code></pre>
-</li>
-<li>
-<p>Update your package index:</p>
-<pre><code>sudo apt-get update</code></pre>
-</li>
-</ol>
-
-<h3>
-<a name="browse-the-repository" class="anchor" href="#browse-the-repository"><span class="octicon octicon-link"></span></a>Browse the repository</h3>
-
-<p>You can browse and download individual packages and files in the repository here:</p>
-
-<ul>
-<li><a href="raspbian">raspbian</a></li>
-</ul>
+			<br/>
+          </li>
+          <li>Install the repository signing key:
+            <pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
+			<br/>
+          </li>
+          <li>Update your package index:
+            <pre><code>sudo apt-get update</code></pre>
+          </li>
+        </ol>
+        <h3>
+        <a name="removing-this-repository" class="anchor" href="#removing-this-repository"></a>Removing this repository</h3>
+        <ol>
+          <li>Remove the repository:
+            <pre><code>sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list</code></pre>
+          <br/></li>
+          <li>Remove the repository signing key:
+            <pre><code>sudo apt-key del 0F5BFDFE</code></pre>
+          <br/></li>
+          <li>Update your package index:
+            <pre><code>sudo apt-get update</code></pre>
+          <br/></li>
+        </ol>
+        <h3>
+        <a name="browse-the-repository" class="anchor" href="#browse-the-repository"></a>Browse the repository</h3>
+        <p>You can browse and download individual packages and files in the repository here:</p>
+        <ul>
+          <li>
+            <a href="raspbian">raspbian</a>
+          </li>
+        </ul>
       </section>
     </div>
-
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with 
+        <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
