@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta name="generator" />
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="packages.hedgerows.org.uk :" />
@@ -20,71 +22,42 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-        <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
-        Jon&#39;s raspbian repository</h3>
-        <p>This site hosts get-iplayer packages for the Raspberry Pi (specifically, for Raspbian jessie), including backports of tools it requires:</p>
-        <ul>
-          <li>get-iplayer</li>
-          <li>AtomicParsley</li>
-          <li>ffmpeg</li>
-          <li>rtmpdump</li>
-        </ul>
-<h3>Recent Changes</h3>
-<h4>Feb 2017: Wheezy Packages Retired</h4>
-<p>Wheezy is no longer supported - please update your apt sources to point to jessie instead - see step 1 below.</p>
-        <h4>Jan 2017: Expired Repository Signing Key</h3>
-        <p>My GPG key expired in January 2017 - if you installed the repository signing key prior to this you will need to reinstall it.  See step 2 under "Using this repository" below.</p>
-		<br/>
-        <h3>
-        <a name="using-this-repository" class="anchor" href="#using-this-repository"></a>Using this repository</h3>
-        <ol>
-          <li>Add the repository:
-            <p>Paste these lines into a terminal window -</p>
-            <pre><code>echo &quot;deb http://packages.hedgerows.org.uk/raspbian jessie/&quot; | sudo tee /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
-echo &quot;deb-src http://packages.hedgerows.org.uk/raspbian jessie/&quot; | sudo tee -a /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
-</code></pre>
-			<br/>
-          </li>
-          <li>Install the repository signing key:
-            <pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
-			<br/>
-          </li>
-          <li>Update your package index:
-            <pre><code>sudo apt update</code></pre>
-<br/>
-          </li>
-          <li>Install get-iplayer:
-            <pre><code>sudo apt install get-iplayer</code></pre>
-<br/>
-          </li>
-        </ol>
-        <h3>
-        <a name="removing-this-repository" class="anchor" href="#removing-this-repository"></a>Removing this repository</h3>
-        <ol>
-          <li>Remove get-iplayer:
-            <pre><code>sudo apt purge get-iplayer</code></pre>
-<br/>
-          </li>
-          <li>Remove the repository:
-            <pre><code>sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list</code></pre>
-          <br/></li>
-          <li>Remove the repository signing key:
-            <pre><code>sudo apt-key del 0F5BFDFE</code></pre>
-          <br/></li>
-          <li>Update your package index:
-            <pre><code>sudo apt update</code></pre>
-          <br/></li>
-        </ol>
-        <h3>
-        <a name="browse-the-repository" class="anchor" href="#browse-the-repository"></a>Browse the repository</h3>
-        <p>You can browse and download individual packages and files in the repository here:</p>
-        <ul>
-          <li>
-            <a href="raspbian">raspbian</a>
-          </li>
-        </ul>
-      </section>
+      <h2>
+      <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
+      Jon&#39;s raspbian repository</h2>
+      <p>This site hosts get-iplayer packages for the Raspberry Pi (specifically, for Raspbian jessie), including backports of
+      tools it requires:</p>
+      <ul>
+        <li>get-iplayer</li>
+        <li>AtomicParsley</li>
+        <li>ffmpeg</li>
+        <li>rtmpdump</li>
+      </ul>
+      <h2>Recent Changes</h2>
+      <h4>Feb 2017: Wheezy Packages Retired</h4>
+      <p>Wheezy is no longer supported - please update your apt sources to point to jessie instead, or simply (re)run the install
+      script below.</p>
+      <h4>Jan 2017: Expired Repository Signing Key</h4>
+      <p>My GPG key expired in January 2017 - if you installed the repository signing key prior to this you will need to update the
+      key, or simply (re)run the install script below.</p>
+      <h2>
+      <a name="using-this-repository" class="anchor" href="#using-this-repository"></a>Using this repository</h2>
+      <p>To install the repository, get-iplayer and its dependencies, paste this line into a terminal window:</p>
+      <pre><code>wget http://packages.hedgerows.org.uk/scripts/install.sh -O - | sh</code></pre>
+      <p>To remove get-iplayer and the repository, paste this line into a terminal window:</p>
+      <pre><code>wget http://packages.hedgerows.org.uk/scripts/uninstall.sh -O - | sh</code></pre>The script uses sudo for some tasks, which will ask for your password.
+      <p>Both scripts use sudo for some tasks, which will ask for your password. If you want to know in advance what the script
+      will do, see 
+      <a href="scripts/install.sh">install.sh</a> or 
+      <a href="scripts/uninstall.sh">uninstall.sh</a>.</p>
+      <h2>
+      <a name="browse-the-repository" class="anchor" href="#browse-the-repository"></a>Browse the repository</h2>
+      <p>You can browse and download individual packages and files in the repository here:</p>
+      <ul>
+        <li>
+          <a href="raspbian">raspbian</a>
+        </li>
+      </ul></section>
     </div>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
