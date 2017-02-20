@@ -23,16 +23,17 @@
         <h3>
         <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
         Jon&#39;s raspbian repository</h3>
-        <p>This site hosts software for the Raspberry Pi (specifically, for Raspbian jessie), including</p>
+        <p>This site hosts get-iplayer packages for the Raspberry Pi (specifically, for Raspbian jessie), including backports of tools it requires:</p>
         <ul>
           <li>get-iplayer</li>
           <li>AtomicParsley</li>
-        <li>ffmpeg</li>
+          <li>ffmpeg</li>
           <li>rtmpdump</li>
         </ul>
-<h3>Wheezy Packages Retired</h3>
+<h3>Recent Changes</h3>
+<h4>Feb 2017: Wheezy Packages Retired</h4>
 <p>Wheezy is no longer supported - please update your apt sources to point to jessie instead - see step 1 below.</p>
-        <h3>Expired Repository Signing Key</h3>
+        <h4>Jan 2017: Expired Repository Signing Key</h3>
         <p>My GPG key expired in January 2017 - if you installed the repository signing key prior to this you will need to reinstall it:</p>
         <pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE</code></pre>
 		<br/>
@@ -51,12 +52,18 @@ echo &quot;deb-src http://packages.hedgerows.org.uk/raspbian jessie/&quot; | sud
 			<br/>
           </li>
           <li>Update your package index:
-            <pre><code>sudo apt-get update</code></pre>
+            <pre><code>sudo apt update</code></pre>
+          </li>
+          <li>Install get-iplayer:
+            <pre><code>sudo apt install get-iplayer</code></pre>
           </li>
         </ol>
         <h3>
         <a name="removing-this-repository" class="anchor" href="#removing-this-repository"></a>Removing this repository</h3>
         <ol>
+          <li>Remove get-iplayer:
+            <pre><code>sudo apt purge get-iplayer</code></pre>
+          </li>
           <li>Remove the repository:
             <pre><code>sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list</code></pre>
           <br/></li>
@@ -64,7 +71,7 @@ echo &quot;deb-src http://packages.hedgerows.org.uk/raspbian jessie/&quot; | sud
             <pre><code>sudo apt-key del 0F5BFDFE</code></pre>
           <br/></li>
           <li>Update your package index:
-            <pre><code>sudo apt-get update</code></pre>
+            <pre><code>sudo apt update</code></pre>
           <br/></li>
         </ol>
         <h3>
