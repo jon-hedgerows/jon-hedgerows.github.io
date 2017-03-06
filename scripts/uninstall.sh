@@ -22,7 +22,7 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions.  read this script for details."
 
 # purge get-iplayer
-sudo apt purge get-iplayer
+sudo apt -y purge get-iplayer
 
 # remove the packages.hedgerows.org.uk repository
 sudo rm /etc/apt/sources.list.d/packages.hedgerows.org.uk.list

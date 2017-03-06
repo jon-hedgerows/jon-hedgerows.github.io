@@ -32,4 +32,4 @@ echo "deb-src http://packages.hedgerows.org.uk/raspbian jessie/" | sudo tee -a /
 sudo apt update
 
 # and install get-iplayer
-sudo apt install get-iplayer
+sudo apt -y install get-iplayer
