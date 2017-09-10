@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="generator"
-    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <meta name="generator" />
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="packages.hedgerows.org.uk :" />
@@ -25,31 +22,26 @@
       <h2>
       <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
       Jon&#39;s raspbian repository</h2>
-      <p>This site hosts get-iplayer packages for the Raspberry Pi (specifically, for Raspbian jessie), including backports of
+      <p>This site hosts get-iplayer packages for Raspbian on the Raspberry Pi, including backports of
       tools it requires:</p>
       <ul>
         <li>get-iplayer</li>
         <li>AtomicParsley</li>
-        <li>ffmpeg</li>
-        <li>rtmpdump</li>
       </ul>
       <h2>Recent Changes</h2>
-      <h4>Feb 2017: Wheezy Packages Retired</h4>
-      <p>Wheezy is no longer supported - please update your apt sources to point to jessie instead, or simply (re)run the install
-      script below.</p>
-      <h4>Jan 2017: Expired Repository Signing Key</h4>
-      <p>My GPG key expired in January 2017 - if you installed the repository signing key prior to this you will need to update the
-      key, or simply (re)run the install script below.</p>
+      <h4>Sep 2017: Jessie Packages Retired</h4>
+	  <p>Jessie is no longer supported - please re0run the install script below.  (It's not sufficient to update your apt sources to point to stable, the repository signing key has changed too.)</p>
+	  <p>ffmpeg and rtmpdump are no longer packaged here for raspbian since Stretch includes a recent version of ffmpeg, and rtmpdump is no longer used by get-iplayer.  AtomicParsley has now almost caught up in the debian respositories, so no further versions will be published here.</p>
       <h2>
       <a name="using-this-repository" class="anchor" href="#using-this-repository"></a>Using this repository</h2>
       <p>To install the repository, get-iplayer and its dependencies, paste this line into a terminal window:</p>
-      <pre><code>wget http://packages.hedgerows.org.uk/scripts/install.sh -O - | sh</code></pre>
+      <pre><code>wget http://packages.hedgerows.org.uk/raspbian/install.sh -O - | sh</code></pre>
       <p>To remove get-iplayer and the repository, paste this line into a terminal window:</p>
-      <pre><code>wget http://packages.hedgerows.org.uk/scripts/uninstall.sh -O - | sh</code></pre>The script uses sudo for some tasks, which will ask for your password.
+      <pre><code>wget http://packages.hedgerows.org.uk/raspbian/uninstall.sh -O - | sh</code></pre>
       <p>Both scripts use sudo for some tasks, which will ask for your password. If you want to know in advance what the script
       will do, see 
-      <a href="scripts/install.sh">install.sh</a> or 
-      <a href="scripts/uninstall.sh">uninstall.sh</a>.</p>
+      <a href="raspbian/install.sh">install.sh</a> or 
+      <a href="raspbian/uninstall.sh">uninstall.sh</a>.</p>
       <h2><a name="support" class="anchor" href="#support"></a>Support for get-iplayer</h2>
 	  <p><a href="https://github.com/get-iplayer/get_iplayer/wiki">Read the fine manuals</a> or <a href="https://squarepenguin.co.uk/forums/">ask for help in the forums</a>.</p>
 	  <h2>
