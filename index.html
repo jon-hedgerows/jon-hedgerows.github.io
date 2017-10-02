@@ -23,12 +23,17 @@
       <a name="welcome-to-jons-raspbian-repository" class="anchor" href="#welcome-to-jons-raspbian-repository"></a>Welcome to
       Jon&#39;s raspbian repository</h2>
       <p>This site hosts get-iplayer packages for Raspbian on the Raspberry Pi, including backports of
-      tools it requires:</p>
       <ul>
         <li>get-iplayer</li>
         <li>AtomicParsley</li>
+		<li>ffmpeg (and x265) for Jessie only</li>
       </ul>
       <h2>Recent Changes</h2>
+	  <h4>Oct 2017: Updated for combined Stretch/Jessie compatibility</h4>
+	  <p>In a complete U-turn I've added an ffmpeg package to enable this repository to continue to work
+	  with Jessie, as well as actively support Stretch. But...<p>
+	  <p>For both Jessie and Stretch please re-run the install script below.  (It's not sufficient to update your apt sources to point to stable, the repository signing key has changed too.)</p>
+	  <p>rtmpdump is no longer packaged here for raspbian since get-iplayer no longer uses it, and ffmpeg and AtomicParsley will not be updated again. (They work ok for Jessie, and Stretch already includes more recent versions of both).</p>
       <h4>Sep 2017: Updated for Stretch / Jessie Packages Retired</h4>
 	  <p>Jessie is no longer supported - please re-run the install script below.  (It's not sufficient to update your apt sources to point to stable, the repository signing key has changed too.)</p>
 	  <p>ffmpeg and rtmpdump are no longer packaged here for raspbian since Stretch includes a recent version of ffmpeg, and rtmpdump is no longer used by get-iplayer.  AtomicParsley has now almost caught up in the debian respositories, so no further versions will be published here.</p>
